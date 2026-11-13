@@ -29,7 +29,8 @@ export default function CountryDetails({ country: c, everyCountry, onBack }) {
         </div>
 
         <div className="country-details">
-          <h1></h1>
+          <h1>{c.names.common}</h1>
+          <ul></ul>
         </div>
       </div>
     </>
