@@ -1,16 +1,16 @@
-# React + Vite
+# Rest Countries API
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React app that lets you browse every country in the world search by name filter by region and view detail information about each one. Built with React and Vite, using the Rest Countries API.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[https://react-rest-countries-api-red.vercel.app](https://react-rest-countries-api-red.vercel.app)**
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Browse all countries with flag, population, region, and capital
+- Search countries by name
+- API key kept private using a serverless function
+- Dark / light mode toggle that remembers your choice (saved in localStorage)
+- Filter countries by region (Africa, Americas, Asia, Europe, Oceania)
+- Click country to see details (native name, sub-region, top-level domain, currencies, languages, and border countries)
