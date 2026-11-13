@@ -55,17 +55,19 @@ export default function App() {
     <>
       <Header />
       <main>
-        <div
-          id="countries-container"
-          className="countries-container"
-          style={{ display: 'grid' }}>
-          {visibleCountries.map((country) => (
-            <CountryCard
-              key={country.codes.aplha_3}
-              country={country}
-              onClick={() => setSelected(country)}
-            />
-          ))}
+        <div className="container">
+          <div
+            id="countries-container"
+            className="countries-container"
+            style={{ display: 'grid' }}>
+            {visibleCountries.map((country) => (
+              <CountryCard
+                key={country.codes.aplha_3}
+                country={country}
+                onClick={() => setSelected(country)}
+              />
+            ))}
+          </div>
         </div>
       </main>
     </>
