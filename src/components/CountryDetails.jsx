@@ -30,7 +30,21 @@ export default function CountryDetails({ country: c, everyCountry, onBack }) {
 
         <div className="country-details">
           <h1>{c.names.common}</h1>
-          <ul></ul>
+          <ul>
+            <li>
+              <strong>Native Name:</strong> {nativeName}
+            </li>
+            <li>
+              <strong>Population:</strong>{' '}
+              {c.population?.toLocaleString() ?? 'N/A'}
+            </li>
+            <li>
+              <strong>Region:</strong> {c.region}
+            </li>
+            <li>
+              <strong>Sub Region:</strong> {c.subregion ?? 'N/A'}
+            </li>
+          </ul>
         </div>
       </div>
     </>
