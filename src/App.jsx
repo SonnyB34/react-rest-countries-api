@@ -56,18 +56,39 @@ export default function App() {
       <Header />
       <main>
         <div className="container">
-          <div
-            id="countries-container"
-            className="countries-container"
-            style={{ display: 'grid' }}>
-            {visibleCountries.map((country) => (
-              <CountryCard
-                key={country.codes.aplha_3}
-                country={country}
-                onClick={() => setSelected(country)}
+          {selected ? (
+            <div id="country-info" className="country-info show">
+              <CountryDetails
+                country={selected}
+                everyCountry={everyCountry}
+                onBack={() => setSelected(null)}
               />
-            ))}
-          </div>
+            </div>
+          ) : (
+            <>
+              <Filters
+                search={search}
+                onSearchChange={setSearch}
+                region={region}
+                onRegionChange={setRegion}
+              />
+
+              {loading && <p>Loading countries...</p>}
+              {error && <p>{error}</p>}
+              <div
+                id="countries-container"
+                className="countries-container"
+                style={{ display: 'grid' }}>
+                {visibleCountries.map((country) => (
+                  <CountryCard
+                    key={country.codes.aplha_3}
+                    country={country}
+                    onClick={() => setSelected(country)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </main>
     </>
