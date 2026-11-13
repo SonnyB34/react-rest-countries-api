@@ -44,7 +44,26 @@ export default function CountryDetails({ country: c, everyCountry, onBack }) {
             <li>
               <strong>Sub Region:</strong> {c.subregion ?? 'N/A'}
             </li>
+            <li>
+              <strong>Capital:</strong> {capital}
+            </li>
+            <li>
+              <strong>Top Level Domain:</strong> {tld}
+            </li>
+            <li>
+              <strong>Currency:</strong> {currencies}
+            </li>
+            <li>
+              <strong>Languages:</strong> {languages}
+            </li>
           </ul>
+
+          <div className="country-borders">
+            <strong>Border Countries:</strong>
+            {borderNames.length
+              ? borderNames.map((n) => <span key={n}>{n}</span>)
+              : 'None'}
+          </div>
         </div>
       </div>
     </>
